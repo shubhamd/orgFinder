@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en" >
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="stylesheet" type="text/css" href="css/default.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<script src="js/modernizr.custom.js"></script>
+	</head>
+	<body>
+		
+				
+				<div style = "font : bold 20px tahoma;position : absolute; top :30px ;left:30% ;!important">
+				Search for orgs their frequency and years they participated.
+				</div>
+					<div id="sb-search" class="sb-search" style="position:fixed;z-index :100;">
+						<form>
+							<input class="sb-search-input" placeholder="To search for an Org enter its Name ,for frequency enter a digit,for year enter any combination of 9 10 11 12 13 in INCREASING order with SPACE" type="text" value="" name="search" id="search"  >
+							<input class="sb-search-submit" type="submit" value="" >
+							<span class="sb-icon-search" ></span>
+							
+						</form>
+						
+					</div>
+				<div  id ="yrwise">
+						ORGS
+						</div>
+				
+			<style id="search_style"></style>
+<style>
+#yrwise{
+background : #66cccc ;
+position: fixed ;
+padding :5px;
+width :20%;
+height:10%;
+left:0;
+top:200px;
+color : black ;
+font : bold 20px tahoma ;
+
+}
+.contact{
+margin : 20px ;
+box-shadow: 0 1px 3px rgba(0, 0, 0, 255) inset;
+list-style-type : none ;
+position : relative ;
+padding:10px ;
+width : 300px ;
+top:100px ;
+right :150px ;
+background: #B44444;
+border : 2px solid #B44444 ;
+float : right ;
+left:-1%;
+}
+
+</style>
+
+<script type="text/javascript">
+var searchStyle = document.getElementById('search_style');
+
+document.getElementById('search').addEventListener('input', function() {
+  if (!this.value) {
+    searchStyle.innerHTML = "";
+	document.getElementById("yrwise").style.display = "none" ;
+    return;
+  }
+ 
+ //
+  if(this.value==9){
+  searchStyle.innerHTML = ".searchable:not([data-index*=\"" + " 9"+"\"]) { display: none; }";
+  document.getElementById("yrwise").style.display = "block";
+   document.getElementById("yrwise").innerHTML = "Organisations that came in 2009" ;
+    return;
+	
+
+  }
+  
+  if(this.value.length==0)
+  document.getElementById("yrwise").styrl.display = "none" ;
+  if(this.value ==1||this.value ==2||this.value ==3||this.value ==4||this.value ==5){
+   
+  searchStyle.innerHTML = ".searchable:not([data-index*=\"" + this.value.toLowerCase()+"@" +"\"]) { display: none; }";
+  document.getElementById("yrwise").style.display = "block";
+  document.getElementById("yrwise").innerHTML = "Organisations with frequency "+this.value ;
+  }
+  else
+  searchStyle.innerHTML = ".searchable:not([data-index*=\"" + this.value.toLowerCase() +"\"]) { display: none; }";
+  var arr = [10,11,12,13];
+  for(var i=0 ; i<arr.length ; i++)
+  if(this.value==arr[i]){
+  document.getElementById("yrwise").style.display = "block";
+   document.getElementById("yrwise").innerHTML = "Organisations that came in 20"+this.value ;
+ }
+  if(this.value.length>2)
+   document.getElementById("yrwise").style.display = "none";
+});
+
+</script>
+<div class="contact searchable" data-index="advancedconceptsteam 1@ 10">
+<dl><dt>ORGNAME</dt><dd>advancedconceptsteam</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 10</dd></dl></div><div class="contact searchable" data-index="aerospaceresearchnet 1@ 13">
+<dl><dt>ORGNAME</dt><dd>aerospaceresearchnet</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 13</dd></dl></div><div class="contact searchable" data-index="aqsis1 1@ 9">
+<dl><dt>ORGNAME</dt><dd>aqsis1</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 9</dd></dl></div><div class="contact searchable" data-index="articast 1@ 12">
+<dl><dt>ORGNAME</dt><dd>articast</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 12</dd></dl></div><div class="contact searchable" data-index="astrometry 1@ 11">
+<dl><dt>ORGNAME</dt><dd>astrometry</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 11</dd></dl></div><div class="contact searchable" data-index="atheme 1@ 9">
+<dl><dt>ORGNAME</dt><dd>atheme</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 9</dd></dl></div><div class="contact searchable" data-index="atomicblue 1@ 11">
+<dl><dt>ORGNAME</dt><dd>atomicblue</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 11</dd></dl></div><div class="contact searchable" data-index="audacity 1@ 9">
+<dl><dt>ORGNAME</dt><dd>audacity</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 9</dd></dl></div><div class="contact searchable" data-index="beagle 1@ 13">
+<dl><dt>ORGNAME</dt><dd>beagle</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 13</dd></dl></div><div class="contact searchable" data-index="beagleboard 1@ 10">
+<dl><dt>ORGNAME</dt><dd>beagleboard</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 10</dd></dl></div><div class="contact searchable" data-index="beamcommunity 1@ 13">
+<dl><dt>ORGNAME</dt><dd>beamcommunity</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 13</dd></dl></div><div class="contact searchable" data-index="bigbluebutton_soc 1@ 10">
+<dl><dt>ORGNAME</dt><dd>bigbluebutton_soc</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 10</dd></dl></div><div class="contact searchable" data-index="bioconductor 1@ 13">
+<dl><dt>ORGNAME</dt><dd>bioconductor</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 13</dd></dl></div><div class="contact searchable" data-index="biographer 1@ 12">
+<dl><dt>ORGNAME</dt><dd>biographer</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 12</dd></dl></div><div class="contact searchable" data-index="boinc 1@ 12">
+<dl><dt>ORGNAME</dt><dd>boinc</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 12</dd></dl></div><div class="contact searchable" data-index="buildroot 1@ 13">
+<dl><dt>ORGNAME</dt><dd>buildroot</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 13</dd></dl></div><div class="contact searchable" data-index="bzflag 1@ 9">
+<dl><dt>ORGNAME</dt><dd>bzflag</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 9</dd></dl></div><div class="contact searchable" data-index="catroid 1@ 11">
+<dl><dt>ORGNAME</dt><dd>catroid</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 11</dd></dl></div><div class="contact searchable" data-index="catroid_project 1@ 13">
+<dl><dt>ORGNAME</dt><dd>catroid_project</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 13</dd></dl></div><div class="contact searchable" data-index="catroidproject 1@ 12">
+<dl><dt>ORGNAME</dt><dd>catroidproject</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 12</dd></dl></div><div class="contact searchable" data-index="ccan 1@ 9">
+<dl><dt>ORGNAME</dt><dd>ccan</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 9</dd></dl></div><div class="contact searchable" data-index="ccharles 1@ 9">
+<dl><dt>ORGNAME</dt><dd>ccharles</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 9</dd></dl></div><div class="contact searchable" data-index="ccm 1@ 13">
+<dl><dt>ORGNAME</dt><dd>ccm</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 13</dd></dl></div><div class="contact searchable" data-index="cernvm 1@ 11">
+<dl><dt>ORGNAME</dt><dd>cernvm</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 11</dd></dl></div><div class="contact searchable" data-index="cesium 1@ 13">
+<dl><dt>ORGNAME</dt><dd>cesium</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 13</dd></dl></div><div class="contact searchable" data-index="chromiumos 1@ 10">
+<dl><dt>ORGNAME</dt><dd>chromiumos</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 10</dd></dl></div><div class="contact searchable" data-index="clojure 1@ 12">
+<dl><dt>ORGNAME</dt><dd>clojure</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 12</dd></dl></div><div class="contact searchable" data-index="clojure_dev 1@ 13">
+<dl><dt>ORGNAME</dt><dd>clojure_dev</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 13</dd></dl></div><div class="contact searchable" data-index="coresystems 1@ 9">
+<dl><dt>ORGNAME</dt><dd>coresystems</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 9</dd></dl></div><div class="contact searchable" data-index="cosm 1@ 13">
+<dl><dt>ORGNAME</dt><dd>cosm</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 13</dd></dl></div><div class="contact searchable" data-index="creativecommons 1@ 10">
+<dl><dt>ORGNAME</dt><dd>creativecommons</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 10</dd></dl></div><div class="contact searchable" data-index="cryptostick 1@ 13">
+<dl><dt>ORGNAME</dt><dd>cryptostick</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 13</dd></dl></div><div class="contact searchable" data-index="darktable 1@ 11">
+<dl><dt>ORGNAME</dt><dd>darktable</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 11</dd></dl></div><div class="contact searchable" data-index="dhis2 1@ 13">
+<dl><dt>ORGNAME</dt><dd>dhis2</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 13</dd></dl></div><div class="contact searchable" data-index="dlang 1@ 12">
+<dl><dt>ORGNAME</dt><dd>dlang</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 12</dd></dl></div><div class="contact searchable" data-index="dojo 1@ 10">
+<dl><dt>ORGNAME</dt><dd>dojo</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 10</dd></dl></div><div class="contact searchable" data-index="dokuwiki 1@ 11">
+<dl><dt>ORGNAME</dt><dd>dokuwiki</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 11</dd></dl></div><div class="contact searchable" data-index="dprogramminglanguage 1@ 11">
+<dl><dt>ORGNAME</dt><dd>dprogramminglanguage</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 11</dd></dl></div><div class="contact searchable" data-index="dragonfly 1@ 10">
+<dl><dt>ORGNAME</dt><dd>dragonfly</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 10</dd></dl></div><div class="contact searchable" data-index="dreamwidth 1@ 10">
+<dl><dt>ORGNAME</dt><dd>dreamwidth</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 10</dd></dl></div><div class="contact searchable" data-index="dspace 1@ 9">
+<dl><dt>ORGNAME</dt><dd>dspace</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 9</dd></dl></div><div class="contact searchable" data-index="dukeleto 1@ 9">
+<dl><dt>ORGNAME</dt><dd>dukeleto</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 9</dd></dl></div><div class="contact searchable" data-index="dune 1@ 13">
+<dl><dt>ORGNAME</dt><dd>dune</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 13</dd></dl></div><div class="contact searchable" data-index="e_cidadania 1@ 12">
+<dl><dt>ORGNAME</dt><dd>e_cidadania</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 12</dd></dl></div><div class="contact searchable" data-index="eff 1@ 9">
+<dl><dt>ORGNAME</dt><dd>eff</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 9</dd></dl></div><div class="contact searchable" data-index="eff_tor 1@ 12">
+<dl><dt>ORGNAME</dt><dd>eff_tor</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 12</dd></dl></div><div class="contact searchable" data-index="elgg 1@ 11">
+<dl><dt>ORGNAME</dt><dd>elgg</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 11</dd></dl></div><div class="contact searchable" data-index="enlightenment 1@ 9">
+<dl><dt>ORGNAME</dt><dd>enlightenment</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 9</dd></dl></div><div class="contact searchable" data-index="esos 1@ 9">
+<dl><dt>ORGNAME</dt><dd>esos</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 9</dd></dl></div><div class="contact searchable" data-index="evergreen_ils 1@ 11">
+<dl><dt>ORGNAME</dt><dd>evergreen_ils</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 11</dd></dl></div><div class="contact searchable" data-index="expertlabs 1@ 10">
+<dl><dt>ORGNAME</dt><dd>expertlabs</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 10</dd></dl></div><div class="contact searchable" data-index="facebook 1@ 10">
+<dl><dt>ORGNAME</dt><dd>facebook</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 10</dd></dl></div><div class="contact searchable" data-index="ffmpeg_libav 1@ 11">
+<dl><dt>ORGNAME</dt><dd>ffmpeg_libav</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 11</dd></dl></div><div class="contact searchable" data-index="ffopenwrt 1@ 9">
+<dl><dt>ORGNAME</dt><dd>ffopenwrt</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 9</dd></dl></div><div class="contact searchable" data-index="fibercorps 1@ 11">
+<dl><dt>ORGNAME</dt><dd>fibercorps</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 11</dd></dl></div><div class="contact searchable" data-index="fiji 1@ 9">
+<dl><dt>ORGNAME</dt><dd>fiji</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 9</dd></dl></div><div class="contact searchable" data-index="fluxbox 1@ 11">
+<dl><dt>ORGNAME</dt><dd>fluxbox</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 11</dd></dl></div><div class="contact searchable" data-index="freedroid 1@ 10">
+<dl><dt>ORGNAME</dt><dd>freedroid</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 10</dd></dl></div><div class="contact searchable" data-index="freedroidrpg 1@ 11">
+<dl><dt>ORGNAME</dt><dd>freedroidrpg</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 11</dd></dl></div><div class="contact searchable" data-index="fsij 1@ 9">
+<dl><dt>ORGNAME</dt><dd>fsij</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 9</dd></dl></div><div class="contact searchable" data-index="fsl 1@ 12">
+<dl><dt>ORGNAME</dt><dd>fsl</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 12</dd></dl></div><div class="contact searchable" data-index="funf 1@ 13">
+<dl><dt>ORGNAME</dt><dd>funf</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 13</dd></dl></div><div class="contact searchable" data-index="ganeti 1@ 13">
+<dl><dt>ORGNAME</dt><dd>ganeti</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 13</dd></dl></div><div class="contact searchable" data-index="gnss_sdr 1@ 13">
+<dl><dt>ORGNAME</dt><dd>gnss_sdr</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 13</dd></dl></div><div class="contact searchable" data-index="gnucash 1@ 11">
+<dl><dt>ORGNAME</dt><dd>gnucash</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 11</dd></dl></div><div class="contact searchable" data-index="gnuproject 1@ 10">
+<dl><dt>ORGNAME</dt><dd>gnuproject</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 10</dd></dl></div><div class="contact searchable" data-index="gnuradio 1@ 13">
+<dl><dt>ORGNAME</dt><dd>gnuradio</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 13</dd></dl></div><div class="contact searchable" data-index="go_oo 1@ 10">
+<dl><dt>ORGNAME</dt><dd>go_oo</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 10</dd></dl></div><div class="contact searchable" data-index="google_caja 1@ 10">
+<dl><dt>ORGNAME</dt><dd>google_caja</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 10</dd></dl></div><div class="contact searchable" data-index="gstreamer 1@ 12">
+<dl><dt>ORGNAME</dt><dd>gstreamer</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 12</dd></dl></div><div class="contact searchable" data-index="hackystat 1@ 9">
+<dl><dt>ORGNAME</dt><dd>hackystat</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 9</dd></dl></div><div class="contact searchable" data-index="hiit 1@ 11">
+<dl><dt>ORGNAME</dt><dd>hiit</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 11</dd></dl></div><div class="contact searchable" data-index="idi_atrc 1@ 10">
+<dl><dt>ORGNAME</dt><dd>idi_atrc</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 10</dd></dl></div><div class="contact searchable" data-index="ifc_uiowa 1@ 13">
+<dl><dt>ORGNAME</dt><dd>ifc_uiowa</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 13</dd></dl></div><div class="contact searchable" data-index="ims 1@ 13">
+<dl><dt>ORGNAME</dt><dd>ims</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 13</dd></dl></div><div class="contact searchable" data-index="ipxe 1@ 12">
+<dl><dt>ORGNAME</dt><dd>ipxe</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 12</dd></dl></div><div class="contact searchable" data-index="isabelle 1@ 11">
+<dl><dt>ORGNAME</dt><dd>isabelle</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 11</dd></dl></div><div class="contact searchable" data-index="jcleeland 1@ 9">
+<dl><dt>ORGNAME</dt><dd>jcleeland</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 9</dd></dl></div><div class="contact searchable" data-index="jimg 1@ 11">
+<dl><dt>ORGNAME</dt><dd>jimg</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 11</dd></dl></div><div class="contact searchable" data-index="jitsi 1@ 11">
+<dl><dt>ORGNAME</dt><dd>jitsi</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 11</dd></dl></div><div class="contact searchable" data-index="jpf 1@ 10">
+<dl><dt>ORGNAME</dt><dd>jpf</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 10</dd></dl></div><div class="contact searchable" data-index="k9 1@ 11">
+<dl><dt>ORGNAME</dt><dd>k9</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 11</dd></dl></div><div class="contact searchable" data-index="karlberry 1@ 9">
+<dl><dt>ORGNAME</dt><dd>karlberry</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 9</dd></dl></div><div class="contact searchable" data-index="languagetool 1@ 11">
+<dl><dt>ORGNAME</dt><dd>languagetool</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 11</dd></dl></div><div class="contact searchable" data-index="larrygritz 1@ 9">
+<dl><dt>ORGNAME</dt><dd>larrygritz</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 9</dd></dl></div><div class="contact searchable" data-index="lg 1@ 13">
+<dl><dt>ORGNAME</dt><dd>lg</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 13</dd></dl></div><div class="contact searchable" data-index="libav 1@ 12">
+<dl><dt>ORGNAME</dt><dd>libav</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 12</dd></dl></div><div class="contact searchable" data-index="libsdl 1@ 13">
+<dl><dt>ORGNAME</dt><dd>libsdl</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 13</dd></dl></div><div class="contact searchable" data-index="liquid_galaxy 1@ 12">
+<dl><dt>ORGNAME</dt><dd>liquid_galaxy</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 12</dd></dl></div><div class="contact searchable" data-index="liquidgalaxy 1@ 11">
+<dl><dt>ORGNAME</dt><dd>liquidgalaxy</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 11</dd></dl></div><div class="contact searchable" data-index="lmonade 1@ 13">
+<dl><dt>ORGNAME</dt><dd>lmonade</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 13</dd></dl></div><div class="contact searchable" data-index="lttng 1@ 13">
+<dl><dt>ORGNAME</dt><dd>lttng</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 13</dd></dl></div><div class="contact searchable" data-index="lxde 1@ 10">
+<dl><dt>ORGNAME</dt><dd>lxde</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 10</dd></dl></div><div class="contact searchable" data-index="lyx 1@ 13">
+<dl><dt>ORGNAME</dt><dd>lyx</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 13</dd></dl></div><div class="contact searchable" data-index="m_lab 1@ 13">
+<dl><dt>ORGNAME</dt><dd>m_lab</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 13</dd></dl></div><div class="contact searchable" data-index="mariadb 1@ 13">
+<dl><dt>ORGNAME</dt><dd>mariadb</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 13</dd></dl></div><div class="contact searchable" data-index="mbl_cli 1@ 11">
+<dl><dt>ORGNAME</dt><dd>mbl_cli</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 11</dd></dl></div><div class="contact searchable" data-index="mbleol 1@ 10">
+<dl><dt>ORGNAME</dt><dd>mbleol</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 10</dd></dl></div><div class="contact searchable" data-index="mejmeeks 1@ 9">
+<dl><dt>ORGNAME</dt><dd>mejmeeks</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 9</dd></dl></div><div class="contact searchable" data-index="metalink 1@ 12">
+<dl><dt>ORGNAME</dt><dd>metalink</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 12</dd></dl></div><div class="contact searchable" data-index="minix 1@ 12">
+<dl><dt>ORGNAME</dt><dd>minix</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 12</dd></dl></div><div class="contact searchable" data-index="minix3 1@ 11">
+<dl><dt>ORGNAME</dt><dd>minix3</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 11</dd></dl></div><div class="contact searchable" data-index="mit_center_for_mobile_learning 1@ 12">
+<dl><dt>ORGNAME</dt><dd>mit_center_for_mobile_learning</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 12</dd></dl></div><div class="contact searchable" data-index="mlab 1@ 12">
+<dl><dt>ORGNAME</dt><dd>mlab</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 12</dd></dl></div><div class="contact searchable" data-index="mlpack 1@ 13">
+<dl><dt>ORGNAME</dt><dd>mlpack</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 13</dd></dl></div><div class="contact searchable" data-index="mlton 1@ 13">
+<dl><dt>ORGNAME</dt><dd>mlton</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 13</dd></dl></div><div class="contact searchable" data-index="moveit 1@ 13">
+<dl><dt>ORGNAME</dt><dd>moveit</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 13</dd></dl></div><div class="contact searchable" data-index="musescore 1@ 13">
+<dl><dt>ORGNAME</dt><dd>musescore</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 13</dd></dl></div><div class="contact searchable" data-index="musicbrainz 1@ 9">
+<dl><dt>ORGNAME</dt><dd>musicbrainz</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 9</dd></dl></div><div class="contact searchable" data-index="mysociety 1@ 12">
+<dl><dt>ORGNAME</dt><dd>mysociety</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 12</dd></dl></div><div class="contact searchable" data-index="nationallibraryczechrepublic 1@ 13">
+<dl><dt>ORGNAME</dt><dd>nationallibraryczechrepublic</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 13</dd></dl></div><div class="contact searchable" data-index="nativeclient 1@ 9">
+<dl><dt>ORGNAME</dt><dd>nativeclient</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 9</dd></dl></div><div class="contact searchable" data-index="ncsa 1@ 9">
+<dl><dt>ORGNAME</dt><dd>ncsa</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 9</dd></dl></div><div class="contact searchable" data-index="netfilter 1@ 13">
+<dl><dt>ORGNAME</dt><dd>netfilter</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 13</dd></dl></div><div class="contact searchable" data-index="netsurf 1@ 9">
+<dl><dt>ORGNAME</dt><dd>netsurf</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 9</dd></dl></div><div class="contact searchable" data-index="newvisions 1@ 12">
+<dl><dt>ORGNAME</dt><dd>newvisions</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 12</dd></dl></div><div class="contact searchable" data-index="ninux 1@ 12">
+<dl><dt>ORGNAME</dt><dd>ninux</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 12</dd></dl></div><div class="contact searchable" data-index="nkp 1@ 12">
+<dl><dt>ORGNAME</dt><dd>nkp</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 12</dd></dl></div><div class="contact searchable" data-index="ogre3d 1@ 11">
+<dl><dt>ORGNAME</dt><dd>ogre3d</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 11</dd></dl></div><div class="contact searchable" data-index="oi 1@ 10">
+<dl><dt>ORGNAME</dt><dd>oi</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 10</dd></dl></div><div class="contact searchable" data-index="oiio 1@ 11">
+<dl><dt>ORGNAME</dt><dd>oiio</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 11</dd></dl></div><div class="contact searchable" data-index="ompl 1@ 13">
+<dl><dt>ORGNAME</dt><dd>ompl</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 13</dd></dl></div><div class="contact searchable" data-index="onlab 1@ 13">
+<dl><dt>ORGNAME</dt><dd>onlab</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 13</dd></dl></div><div class="contact searchable" data-index="open64 1@ 9">
+<dl><dt>ORGNAME</dt><dd>open64</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 9</dd></dl></div><div class="contact searchable" data-index="opencast 1@ 12">
+<dl><dt>ORGNAME</dt><dd>opencast</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 12</dd></dl></div><div class="contact searchable" data-index="openchange 1@ 9">
+<dl><dt>ORGNAME</dt><dd>openchange</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 9</dd></dl></div><div class="contact searchable" data-index="opendap_code 1@ 10">
+<dl><dt>ORGNAME</dt><dd>opendap_code</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 10</dd></dl></div><div class="contact searchable" data-index="openflowhub 1@ 12">
+<dl><dt>ORGNAME</dt><dd>openflowhub</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 12</dd></dl></div><div class="contact searchable" data-index="opennebula 1@ 10">
+<dl><dt>ORGNAME</dt><dd>opennebula</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 10</dd></dl></div><div class="contact searchable" data-index="openssh 1@ 9">
+<dl><dt>ORGNAME</dt><dd>openssh</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 9</dd></dl></div><div class="contact searchable" data-index="openstreetmap 1@ 9">
+<dl><dt>ORGNAME</dt><dd>openstreetmap</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 9</dd></dl></div><div class="contact searchable" data-index="opticks 1@ 10">
+<dl><dt>ORGNAME</dt><dd>opticks</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 10</dd></dl></div><div class="contact searchable" data-index="ospo 1@ 11">
+<dl><dt>ORGNAME</dt><dd>ospo</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 11</dd></dl></div><div class="contact searchable" data-index="osr 1@ 13">
+<dl><dt>ORGNAME</dt><dd>osr</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 13</dd></dl></div><div class="contact searchable" data-index="osrf 1@ 13">
+<dl><dt>ORGNAME</dt><dd>osrf</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 13</dd></dl></div><div class="contact searchable" data-index="outercurve 1@ 12">
+<dl><dt>ORGNAME</dt><dd>outercurve</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 12</dd></dl></div><div class="contact searchable" data-index="oydev 1@ 9">
+<dl><dt>ORGNAME</dt><dd>oydev</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 9</dd></dl></div><div class="contact searchable" data-index="packetfence 1@ 12">
+<dl><dt>ORGNAME</dt><dd>packetfence</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 12</dd></dl></div><div class="contact searchable" data-index="pagmo 1@ 13">
+<dl><dt>ORGNAME</dt><dd>pagmo</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 13</dd></dl></div><div class="contact searchable" data-index="php 1@ 9">
+<dl><dt>ORGNAME</dt><dd>php</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 9</dd></dl></div><div class="contact searchable" data-index="pitivi 1@ 13">
+<dl><dt>ORGNAME</dt><dd>pitivi</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 13</dd></dl></div><div class="contact searchable" data-index="pkiframework 1@ 9">
+<dl><dt>ORGNAME</dt><dd>pkiframework</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 9</dd></dl></div><div class="contact searchable" data-index="plasma_umass 1@ 13">
+<dl><dt>ORGNAME</dt><dd>plasma_umass</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 13</dd></dl></div><div class="contact searchable" data-index="plseatuw 1@ 10">
+<dl><dt>ORGNAME</dt><dd>plseatuw</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 10</dd></dl></div><div class="contact searchable" data-index="pma 1@ 10">
+<dl><dt>ORGNAME</dt><dd>pma</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 10</dd></dl></div><div class="contact searchable" data-index="princetoncitp 1@ 10">
+<dl><dt>ORGNAME</dt><dd>princetoncitp</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 10</dd></dl></div><div class="contact searchable" data-index="prismmodelchecker 1@ 13">
+<dl><dt>ORGNAME</dt><dd>prismmodelchecker</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 13</dd></dl></div><div class="contact searchable" data-index="privly 1@ 13">
+<dl><dt>ORGNAME</dt><dd>privly</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 13</dd></dl></div><div class="contact searchable" data-index="psu_home 1@ 10">
+<dl><dt>ORGNAME</dt><dd>psu_home</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 10</dd></dl></div><div class="contact searchable" data-index="ptolemy 1@ 9">
+<dl><dt>ORGNAME</dt><dd>ptolemy</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 9</dd></dl></div><div class="contact searchable" data-index="public_lab 1@ 13">
+<dl><dt>ORGNAME</dt><dd>public_lab</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 13</dd></dl></div><div class="contact searchable" data-index="r_project 1@ 10">
+<dl><dt>ORGNAME</dt><dd>r_project</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 10</dd></dl></div><div class="contact searchable" data-index="reactos 1@ 11">
+<dl><dt>ORGNAME</dt><dd>reactos</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 11</dd></dl></div><div class="contact searchable" data-index="redhat 1@ 9">
+<dl><dt>ORGNAME</dt><dd>redhat</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 9</dd></dl></div><div class="contact searchable" data-index="reductivelabs 1@ 10">
+<dl><dt>ORGNAME</dt><dd>reductivelabs</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 10</dd></dl></div><div class="contact searchable" data-index="rf 1@ 9">
+<dl><dt>ORGNAME</dt><dd>rf</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 9</dd></dl></div><div class="contact searchable" data-index="robocomp 1@ 13">
+<dl><dt>ORGNAME</dt><dd>robocomp</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 13</dd></dl></div><div class="contact searchable" data-index="roostats 1@ 12">
+<dl><dt>ORGNAME</dt><dd>roostats</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 12</dd></dl></div><div class="contact searchable" data-index="routeflow 1@ 13">
+<dl><dt>ORGNAME</dt><dd>routeflow</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 13</dd></dl></div><div class="contact searchable" data-index="sahanafoundation 1@ 10">
+<dl><dt>ORGNAME</dt><dd>sahanafoundation</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 10</dd></dl></div><div class="contact searchable" data-index="sakaiproject 1@ 12">
+<dl><dt>ORGNAME</dt><dd>sakaiproject</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 12</dd></dl></div><div class="contact searchable" data-index="sbcl 1@ 13">
+<dl><dt>ORGNAME</dt><dd>sbcl</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 13</dd></dl></div><div class="contact searchable" data-index="scaffoldhunter 1@ 13">
+<dl><dt>ORGNAME</dt><dd>scaffoldhunter</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 13</dd></dl></div><div class="contact searchable" data-index="sciruby 1@ 13">
+<dl><dt>ORGNAME</dt><dd>sciruby</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 13</dd></dl></div><div class="contact searchable" data-index="scons 1@ 9">
+<dl><dt>ORGNAME</dt><dd>scons</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 9</dd></dl></div><div class="contact searchable" data-index="scribus_team 1@ 9">
+<dl><dt>ORGNAME</dt><dd>scribus_team</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 9</dd></dl></div><div class="contact searchable" data-index="senchalabs 1@ 11">
+<dl><dt>ORGNAME</dt><dd>senchalabs</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 11</dd></dl></div><div class="contact searchable" data-index="setiquest 1@ 11">
+<dl><dt>ORGNAME</dt><dd>setiquest</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 11</dd></dl></div><div class="contact searchable" data-index="silverstripe 1@ 12">
+<dl><dt>ORGNAME</dt><dd>silverstripe</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 12</dd></dl></div><div class="contact searchable" data-index="sjstreeting 1@ 9">
+<dl><dt>ORGNAME</dt><dd>sjstreeting</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 9</dd></dl></div><div class="contact searchable" data-index="smc 1@ 13">
+<dl><dt>ORGNAME</dt><dd>smc</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 13</dd></dl></div><div class="contact searchable" data-index="socr 1@ 12">
+<dl><dt>ORGNAME</dt><dd>socr</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 12</dd></dl></div><div class="contact searchable" data-index="stellarium 1@ 12">
+<dl><dt>ORGNAME</dt><dd>stellarium</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 12</dd></dl></div><div class="contact searchable" data-index="sugar_labs 1@ 10">
+<dl><dt>ORGNAME</dt><dd>sugar_labs</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 10</dd></dl></div><div class="contact searchable" data-index="sugarlabs 1@ 9">
+<dl><dt>ORGNAME</dt><dd>sugarlabs</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 9</dd></dl></div><div class="contact searchable" data-index="sugarlabs2013 1@ 13">
+<dl><dt>ORGNAME</dt><dd>sugarlabs2013</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 13</dd></dl></div><div class="contact searchable" data-index="sunlight 1@ 9">
+<dl><dt>ORGNAME</dt><dd>sunlight</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 9</dd></dl></div><div class="contact searchable" data-index="supertuxkart 1@ 13">
+<dl><dt>ORGNAME</dt><dd>supertuxkart</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 13</dd></dl></div><div class="contact searchable" data-index="svn 1@ 9">
+<dl><dt>ORGNAME</dt><dd>svn</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 9</dd></dl></div><div class="contact searchable" data-index="sxc 1@ 9">
+<dl><dt>ORGNAME</dt><dd>sxc</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 9</dd></dl></div><div class="contact searchable" data-index="syslinux 1@ 9">
+<dl><dt>ORGNAME</dt><dd>syslinux</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 9</dd></dl></div><div class="contact searchable" data-index="tahoe_lafs 1@ 10">
+<dl><dt>ORGNAME</dt><dd>tahoe_lafs</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 10</dd></dl></div><div class="contact searchable" data-index="tbp 1@ 11">
+<dl><dt>ORGNAME</dt><dd>tbp</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 11</dd></dl></div><div class="contact searchable" data-index="thinkup 1@ 13">
+<dl><dt>ORGNAME</dt><dd>thinkup</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 13</dd></dl></div><div class="contact searchable" data-index="tikiwiki 1@ 9">
+<dl><dt>ORGNAME</dt><dd>tikiwiki</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 9</dd></dl></div><div class="contact searchable" data-index="timvideos 1@ 13">
+<dl><dt>ORGNAME</dt><dd>timvideos</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 13</dd></dl></div><div class="contact searchable" data-index="ubuntu 1@ 10">
+<dl><dt>ORGNAME</dt><dd>ubuntu</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 10</dd></dl></div><div class="contact searchable" data-index="umd_mith 1@ 13">
+<dl><dt>ORGNAME</dt><dd>umd_mith</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 13</dd></dl></div><div class="contact searchable" data-index="universal_subtitles 1@ 11">
+<dl><dt>ORGNAME</dt><dd>universal_subtitles</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 11</dd></dl></div><div class="contact searchable" data-index="uraeus 1@ 9">
+<dl><dt>ORGNAME</dt><dd>uraeus</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 9</dd></dl></div><div class="contact searchable" data-index="ushahidi 1@ 10">
+<dl><dt>ORGNAME</dt><dd>ushahidi</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 10</dd></dl></div><div class="contact searchable" data-index="vtk 1@ 11">
+<dl><dt>ORGNAME</dt><dd>vtk</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 11</dd></dl></div><div class="contact searchable" data-index="w3c 1@ 13">
+<dl><dt>ORGNAME</dt><dd>w3c</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 13</dd></dl></div><div class="contact searchable" data-index="winlibre 1@ 9">
+<dl><dt>ORGNAME</dt><dd>winlibre</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 9</dd></dl></div><div class="contact searchable" data-index="wireshark 1@ 13">
+<dl><dt>ORGNAME</dt><dd>wireshark</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 13</dd></dl></div><div class="contact searchable" data-index="xelerance 1@ 9">
+<dl><dt>ORGNAME</dt><dd>xelerance</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 9</dd></dl></div><div class="contact searchable" data-index="xen 1@ 10">
+<dl><dt>ORGNAME</dt><dd>xen</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 10</dd></dl></div><div class="contact searchable" data-index="xen_org 1@ 11">
+<dl><dt>ORGNAME</dt><dd>xen_org</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 11</dd></dl></div><div class="contact searchable" data-index="xiph 1@ 9">
+<dl><dt>ORGNAME</dt><dd>xiph</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 9</dd></dl></div><div class="contact searchable" data-index="yafaray 1@ 10">
+<dl><dt>ORGNAME</dt><dd>yafaray</dd><dt>Frequency</dt><dd>1</dd><dt>Years</dt><dd> 10</dd></dl></div><div class="contact searchable" data-index="admin_minix3 2@ 9 10">
+<dl><dt>ORGNAME</dt><dd>admin_minix3</dd><dt>Frequency</dt><dd>2</dd><dt>Years</dt><dd> 9 10</dd></dl></div><div class="contact searchable" data-index="ankur_india 2@ 12 13">
+<dl><dt>ORGNAME</dt><dd>ankur_india</dd><dt>Frequency</dt><dd>2</dd><dt>Years</dt><dd> 12 13</dd></dl></div><div class="contact searchable" data-index="asf 2@ 9 11">
+<dl><dt>ORGNAME</dt><dd>asf</dd><dt>Frequency</dt><dd>2</dd><dt>Years</dt><dd> 9 11</dd></dl></div><div class="contact searchable" data-index="asterisk 2@ 9 10">
+<dl><dt>ORGNAME</dt><dd>asterisk</dd><dt>Frequency</dt><dd>2</dd><dt>Years</dt><dd> 9 10</dd></dl></div><div class="contact searchable" data-index="benetech 2@ 12 13">
+<dl><dt>ORGNAME</dt><dd>benetech</dd><dt>Frequency</dt><dd>2</dd><dt>Years</dt><dd> 12 13</dd></dl></div><div class="contact searchable" data-index="bloomington 2@ 12 13">
+<dl><dt>ORGNAME</dt><dd>bloomington</dd><dt>Frequency</dt><dd>2</dd><dt>Years</dt><dd> 12 13</dd></dl></div><div class="contact searchable" data-index="bmi_cci 2@ 12 13">
+<dl><dt>ORGNAME</dt><dd>bmi_cci</dd><dt>Frequency</dt><dd>2</dd><dt>Years</dt><dd> 12 13</dd></dl></div><div class="contact searchable" data-index="cernsft 2@ 12 13">
+<dl><dt>ORGNAME</dt><dd>cernsft</dd><dt>Frequency</dt><dd>2</dd><dt>Years</dt><dd> 12 13</dd></dl></div><div class="contact searchable" data-index="climatecode 2@ 11 12">
+<dl><dt>ORGNAME</dt><dd>climatecode</dd><dt>Frequency</dt><dd>2</dd><dt>Years</dt><dd> 11 12</dd></dl></div><div class="contact searchable" data-index="cmusphinx 2@ 11 12">
+<dl><dt>ORGNAME</dt><dd>cmusphinx</dd><dt>Frequency</dt><dd>2</dd><dt>Years</dt><dd> 11 12</dd></dl></div><div class="contact searchable" data-index="concord 2@ 12 13">
+<dl><dt>ORGNAME</dt><dd>concord</dd><dt>Frequency</dt><dd>2</dd><dt>Years</dt><dd> 12 13</dd></dl></div><div class="contact searchable" data-index="connexions 2@ 11 12">
+<dl><dt>ORGNAME</dt><dd>connexions</dd><dt>Frequency</dt><dd>2</dd><dt>Years</dt><dd> 11 12</dd></dl></div><div class="contact searchable" data-index="cscs 2@ 9 11">
+<dl><dt>ORGNAME</dt><dd>cscs</dd><dt>Frequency</dt><dd>2</dd><dt>Years</dt><dd> 9 11</dd></dl></div><div class="contact searchable" data-index="dbpediaspotlight 2@ 12 13">
+<dl><dt>ORGNAME</dt><dd>dbpediaspotlight</dd><dt>Frequency</dt><dd>2</dd><dt>Years</dt><dd> 12 13</dd></dl></div><div class="contact searchable" data-index="docbook 2@ 10 12">
+<dl><dt>ORGNAME</dt><dd>docbook</dd><dt>Frequency</dt><dd>2</dd><dt>Years</dt><dd> 10 12</dd></dl></div><div class="contact searchable" data-index="duraspace 2@ 10 11">
+<dl><dt>ORGNAME</dt><dd>duraspace</dd><dt>Frequency</dt><dd>2</dd><dt>Years</dt><dd> 10 11</dd></dl></div><div class="contact searchable" data-index="ecologylab 2@ 11 12">
+<dl><dt>ORGNAME</dt><dd>ecologylab</dd><dt>Frequency</dt><dd>2</dd><dt>Years</dt><dd> 11 12</dd></dl></div><div class="contact searchable" data-index="epfl_scala 2@ 12 13">
+<dl><dt>ORGNAME</dt><dd>epfl_scala</dd><dt>Frequency</dt><dd>2</dd><dt>Years</dt><dd> 12 13</dd></dl></div><div class="contact searchable" data-index="evergreen 2@ 12 13">
+<dl><dt>ORGNAME</dt><dd>evergreen</dd><dt>Frequency</dt><dd>2</dd><dt>Years</dt><dd> 12 13</dd></dl></div><div class="contact searchable" data-index="ffmpeg 2@ 9 10">
+<dl><dt>ORGNAME</dt><dd>ffmpeg</dd><dt>Frequency</dt><dd>2</dd><dt>Years</dt><dd> 9 10</dd></dl></div><div class="contact searchable" data-index="fossasia 2@ 11 12">
+<dl><dt>ORGNAME</dt><dd>fossasia</dd><dt>Frequency</dt><dd>2</dd><dt>Years</dt><dd> 11 12</dd></dl></div><div class="contact searchable" data-index="freeseer 2@ 11 12">
+<dl><dt>ORGNAME</dt><dd>freeseer</dd><dt>Frequency</dt><dd>2</dd><dt>Years</dt><dd> 11 12</dd></dl></div><div class="contact searchable" data-index="gambit 2@ 11 12">
+<dl><dt>ORGNAME</dt><dd>gambit</dd><dt>Frequency</dt><dd>2</dd><dt>Years</dt><dd> 11 12</dd></dl></div><div class="contact searchable" data-index="gdcm 2@ 11 12">
+<dl><dt>ORGNAME</dt><dd>gdcm</dd><dt>Frequency</dt><dd>2</dd><dt>Years</dt><dd> 11 12</dd></dl></div><div class="contact searchable" data-index="geeklog 2@ 9 10">
+<dl><dt>ORGNAME</dt><dd>geeklog</dd><dt>Frequency</dt><dd>2</dd><dt>Years</dt><dd> 9 10</dd></dl></div><div class="contact searchable" data-index="genmapp 2@ 9 10">
+<dl><dt>ORGNAME</dt><dd>genmapp</dd><dt>Frequency</dt><dd>2</dd><dt>Years</dt><dd> 9 10</dd></dl></div><div class="contact searchable" data-index="google 2@ 9 10">
+<dl><dt>ORGNAME</dt><dd>google</dd><dt>Frequency</dt><dd>2</dd><dt>Years</dt><dd> 9 10</dd></dl></div><div class="contact searchable" data-index="gospo 2@ 12 13">
+<dl><dt>ORGNAME</dt><dd>gospo</dd><dt>Frequency</dt><dd>2</dd><dt>Years</dt><dd> 12 13</dd></dl></div><div class="contact searchable" data-index="gst 2@ 10 11">
+<dl><dt>ORGNAME</dt><dd>gst</dd><dt>Frequency</dt><dd>2</dd><dt>Years</dt><dd> 10 11</dd></dl></div><div class="contact searchable" data-index="hedgewars 2@ 11 12">
+<dl><dt>ORGNAME</dt><dd>hedgewars</dd><dt>Frequency</dt><dd>2</dd><dt>Years</dt><dd> 11 12</dd></dl></div><div class="contact searchable" data-index="helenos 2@ 11 12">
+<dl><dt>ORGNAME</dt><dd>helenos</dd><dt>Frequency</dt><dd>2</dd><dt>Years</dt><dd> 11 12</dd></dl></div><div class="contact searchable" data-index="jato 2@ 9 11">
+<dl><dt>ORGNAME</dt><dd>jato</dd><dt>Frequency</dt><dd>2</dd><dt>Years</dt><dd> 9 11</dd></dl></div><div class="contact searchable" data-index="jboss 2@ 12 13">
+<dl><dt>ORGNAME</dt><dd>jboss</dd><dt>Frequency</dt><dd>2</dd><dt>Years</dt><dd> 12 13</dd></dl></div><div class="contact searchable" data-index="jruby 2@ 12 13">
+<dl><dt>ORGNAME</dt><dd>jruby</dd><dt>Frequency</dt><dd>2</dd><dt>Years</dt><dd> 12 13</dd></dl></div><div class="contact searchable" data-index="komodo 2@ 11 12">
+<dl><dt>ORGNAME</dt><dd>komodo</dd><dt>Frequency</dt><dd>2</dd><dt>Years</dt><dd> 11 12</dd></dl></div><div class="contact searchable" data-index="learningu 2@ 11 12">
+<dl><dt>ORGNAME</dt><dd>learningu</dd><dt>Frequency</dt><dd>2</dd><dt>Years</dt><dd> 11 12</dd></dl></div><div class="contact searchable" data-index="limesurvey 2@ 10 11">
+<dl><dt>ORGNAME</dt><dd>limesurvey</dd><dt>Frequency</dt><dd>2</dd><dt>Years</dt><dd> 10 11</dd></dl></div><div class="contact searchable" data-index="linux_foundation 2@ 9 11">
+<dl><dt>ORGNAME</dt><dd>linux_foundation</dd><dt>Frequency</dt><dd>2</dd><dt>Years</dt><dd> 9 11</dd></dl></div><div class="contact searchable" data-index="maemo 2@ 9 10">
+<dl><dt>ORGNAME</dt><dd>maemo</dd><dt>Frequency</dt><dd>2</dd><dt>Years</dt><dd> 9 10</dd></dl></div><div class="contact searchable" data-index="mapnik 2@ 10 11">
+<dl><dt>ORGNAME</dt><dd>mapnik</dd><dt>Frequency</dt><dd>2</dd><dt>Years</dt><dd> 10 11</dd></dl></div><div class="contact searchable" data-index="mifos 2@ 9 10">
+<dl><dt>ORGNAME</dt><dd>mifos</dd><dt>Frequency</dt><dd>2</dd><dt>Years</dt><dd> 9 10</dd></dl></div><div class="contact searchable" data-index="moinmoin 2@ 12 13">
+<dl><dt>ORGNAME</dt><dd>moinmoin</dd><dt>Frequency</dt><dd>2</dd><dt>Years</dt><dd> 12 13</dd></dl></div><div class="contact searchable" data-index="monkey 2@ 12 13">
+<dl><dt>ORGNAME</dt><dd>monkey</dd><dt>Frequency</dt><dd>2</dd><dt>Years</dt><dd> 12 13</dd></dl></div><div class="contact searchable" data-index="n52 2@ 12 13">
+<dl><dt>ORGNAME</dt><dd>n52</dd><dt>Frequency</dt><dd>2</dd><dt>Years</dt><dd> 12 13</dd></dl></div><div class="contact searchable" data-index="networktime 2@ 12 13">
+<dl><dt>ORGNAME</dt><dd>networktime</dd><dt>Frequency</dt><dd>2</dd><dt>Years</dt><dd> 12 13</dd></dl></div><div class="contact searchable" data-index="oar 2@ 9 10">
+<dl><dt>ORGNAME</dt><dd>oar</dd><dt>Frequency</dt><dd>2</dd><dt>Years</dt><dd> 9 10</dd></dl></div><div class="contact searchable" data-index="ogdf 2@ 12 13">
+<dl><dt>ORGNAME</dt><dd>ogdf</dd><dt>Frequency</dt><dd>2</dd><dt>Years</dt><dd> 12 13</dd></dl></div><div class="contact searchable" data-index="ogre 2@ 12 13">
+<dl><dt>ORGNAME</dt><dd>ogre</dd><dt>Frequency</dt><dd>2</dd><dt>Years</dt><dd> 12 13</dd></dl></div><div class="contact searchable" data-index="omii_uk 2@ 9 10">
+<dl><dt>ORGNAME</dt><dd>omii_uk</dd><dt>Frequency</dt><dd>2</dd><dt>Years</dt><dd> 9 10</dd></dl></div><div class="contact searchable" data-index="openafs 2@ 9 10">
+<dl><dt>ORGNAME</dt><dd>openafs</dd><dt>Frequency</dt><dd>2</dd><dt>Years</dt><dd> 9 10</dd></dl></div><div class="contact searchable" data-index="opencog 2@ 9 12">
+<dl><dt>ORGNAME</dt><dd>opencog</dd><dt>Frequency</dt><dd>2</dd><dt>Years</dt><dd> 9 12</dd></dl></div><div class="contact searchable" data-index="openimageio 2@ 10 12">
+<dl><dt>ORGNAME</dt><dd>openimageio</dd><dt>Frequency</dt><dd>2</dd><dt>Years</dt><dd> 10 12</dd></dl></div><div class="contact searchable" data-index="openintents 2@ 11 12">
+<dl><dt>ORGNAME</dt><dd>openintents</dd><dt>Frequency</dt><dd>2</dd><dt>Years</dt><dd> 11 12</dd></dl></div><div class="contact searchable" data-index="openlighting 2@ 12 13">
+<dl><dt>ORGNAME</dt><dd>openlighting</dd><dt>Frequency</dt><dd>2</dd><dt>Years</dt><dd> 12 13</dd></dl></div><div class="contact searchable" data-index="orange 2@ 11 12">
+<dl><dt>ORGNAME</dt><dd>orange</dd><dt>Frequency</dt><dd>2</dd><dt>Years</dt><dd> 11 12</dd></dl></div><div class="contact searchable" data-index="owasp 2@ 12 13">
+<dl><dt>ORGNAME</dt><dd>owasp</dd><dt>Frequency</dt><dd>2</dd><dt>Years</dt><dd> 12 13</dd></dl></div><div class="contact searchable" data-index="pardus 2@ 9 10">
+<dl><dt>ORGNAME</dt><dd>pardus</dd><dt>Frequency</dt><dd>2</dd><dt>Years</dt><dd> 9 10</dd></dl></div><div class="contact searchable" data-index="pcl 2@ 11 12">
+<dl><dt>ORGNAME</dt><dd>pcl</dd><dt>Frequency</dt><dd>2</dd><dt>Years</dt><dd> 11 12</dd></dl></div><div class="contact searchable" data-index="phpbb 2@ 12 13">
+<dl><dt>ORGNAME</dt><dd>phpbb</dd><dt>Frequency</dt><dd>2</dd><dt>Years</dt><dd> 12 13</dd></dl></div><div class="contact searchable" data-index="pulseaudio 2@ 12 13">
+<dl><dt>ORGNAME</dt><dd>pulseaudio</dd><dt>Frequency</dt><dd>2</dd><dt>Years</dt><dd> 12 13</dd></dl></div><div class="contact searchable" data-index="puppetlabs 2@ 12 13">
+<dl><dt>ORGNAME</dt><dd>puppetlabs</dd><dt>Frequency</dt><dd>2</dd><dt>Years</dt><dd> 12 13</dd></dl></div><div class="contact searchable" data-index="rails 2@ 9 13">
+<dl><dt>ORGNAME</dt><dd>rails</dd><dt>Frequency</dt><dd>2</dd><dt>Years</dt><dd> 9 13</dd></dl></div><div class="contact searchable" data-index="raxa 2@ 12 13">
+<dl><dt>ORGNAME</dt><dd>raxa</dd><dt>Frequency</dt><dd>2</dd><dt>Years</dt><dd> 12 13</dd></dl></div><div class="contact searchable" data-index="sage 2@ 12 13">
+<dl><dt>ORGNAME</dt><dd>sage</dd><dt>Frequency</dt><dd>2</dd><dt>Years</dt><dd> 12 13</dd></dl></div><div class="contact searchable" data-index="scala 2@ 10 11">
+<dl><dt>ORGNAME</dt><dd>scala</dd><dt>Frequency</dt><dd>2</dd><dt>Years</dt><dd> 10 11</dd></dl></div><div class="contact searchable" data-index="scribus 2@ 11 12">
+<dl><dt>ORGNAME</dt><dd>scribus</dd><dt>Frequency</dt><dd>2</dd><dt>Years</dt><dd> 11 12</dd></dl></div><div class="contact searchable" data-index="scripps_crowdbio 2@ 12 13">
+<dl><dt>ORGNAME</dt><dd>scripps_crowdbio</dd><dt>Frequency</dt><dd>2</dd><dt>Years</dt><dd> 12 13</dd></dl></div><div class="contact searchable" data-index="selenium 2@ 10 11">
+<dl><dt>ORGNAME</dt><dd>selenium</dd><dt>Frequency</dt><dd>2</dd><dt>Years</dt><dd> 10 11</dd></dl></div><div class="contact searchable" data-index="sharpdevelop 2@ 9 10">
+<dl><dt>ORGNAME</dt><dd>sharpdevelop</dd><dt>Frequency</dt><dd>2</dd><dt>Years</dt><dd> 9 10</dd></dl></div><div class="contact searchable" data-index="sigmah 2@ 12 13">
+<dl><dt>ORGNAME</dt><dd>sigmah</dd><dt>Frequency</dt><dd>2</dd><dt>Years</dt><dd> 12 13</dd></dl></div><div class="contact searchable" data-index="simplecv 2@ 12 13">
+<dl><dt>ORGNAME</dt><dd>simplecv</dd><dt>Frequency</dt><dd>2</dd><dt>Years</dt><dd> 12 13</dd></dl></div><div class="contact searchable" data-index="sipcomm 2@ 9 10">
+<dl><dt>ORGNAME</dt><dd>sipcomm</dd><dt>Frequency</dt><dd>2</dd><dt>Years</dt><dd> 9 10</dd></dl></div><div class="contact searchable" data-index="statusnet 2@ 10 11">
+<dl><dt>ORGNAME</dt><dd>statusnet</dd><dt>Frequency</dt><dd>2</dd><dt>Years</dt><dd> 10 11</dd></dl></div><div class="contact searchable" data-index="sunlightlabs 2@ 10 11">
+<dl><dt>ORGNAME</dt><dd>sunlightlabs</dd><dt>Frequency</dt><dd>2</dd><dt>Years</dt><dd> 10 11</dd></dl></div><div class="contact searchable" data-index="swig 2@ 9 12">
+<dl><dt>ORGNAME</dt><dd>swig</dd><dt>Frequency</dt><dd>2</dd><dt>Years</dt><dd> 9 12</dd></dl></div><div class="contact searchable" data-index="thousandparsec 2@ 9 10">
+<dl><dt>ORGNAME</dt><dd>thousandparsec</dd><dt>Frequency</dt><dd>2</dd><dt>Years</dt><dd> 9 10</dd></dl></div><div class="contact searchable" data-index="tianocore 2@ 11 12">
+<dl><dt>ORGNAME</dt><dd>tianocore</dd><dt>Frequency</dt><dd>2</dd><dt>Years</dt><dd> 11 12</dd></dl></div><div class="contact searchable" data-index="tpf 2@ 10 11">
+<dl><dt>ORGNAME</dt><dd>tpf</dd><dt>Frequency</dt><dd>2</dd><dt>Years</dt><dd> 10 11</dd></dl></div><div class="contact searchable" data-index="turbogears 2@ 9 10">
+<dl><dt>ORGNAME</dt><dd>turbogears</dd><dt>Frequency</dt><dd>2</dd><dt>Years</dt><dd> 9 10</dd></dl></div><div class="contact searchable" data-index="twitter 2@ 12 13">
+<dl><dt>ORGNAME</dt><dd>twitter</dd><dt>Frequency</dt><dd>2</dd><dt>Years</dt><dd> 12 13</dd></dl></div><div class="contact searchable" data-index="unknown_horizons 2@ 11 12">
+<dl><dt>ORGNAME</dt><dd>unknown_horizons</dd><dt>Frequency</dt><dd>2</dd><dt>Years</dt><dd> 11 12</dd></dl></div><div class="contact searchable" data-index="wiselib 2@ 12 13">
+<dl><dt>ORGNAME</dt><dd>wiselib</dd><dt>Frequency</dt><dd>2</dd><dt>Years</dt><dd> 12 13</dd></dl></div><div class="contact searchable" data-index="xapian 2@ 11 12">
+<dl><dt>ORGNAME</dt><dd>xapian</dd><dt>Frequency</dt><dd>2</dd><dt>Years</dt><dd> 11 12</dd></dl></div><div class="contact searchable" data-index="xbmc 2@ 12 13">
+<dl><dt>ORGNAME</dt><dd>xbmc</dd><dt>Frequency</dt><dd>2</dd><dt>Years</dt><dd> 12 13</dd></dl></div><div class="contact searchable" data-index="apache 3@ 10 12 13">
+<dl><dt>ORGNAME</dt><dd>apache</dd><dt>Frequency</dt><dd>3</dd><dt>Years</dt><dd> 10 12 13</dd></dl></div><div class="contact searchable" data-index="berkman 3@ 9 10 12">
+<dl><dt>ORGNAME</dt><dd>berkman</dd><dt>Frequency</dt><dd>3</dd><dt>Years</dt><dd> 9 10 12</dd></dl></div><div class="contact searchable" data-index="buildbot 3@ 11 12 13">
+<dl><dt>ORGNAME</dt><dd>buildbot</dd><dt>Frequency</dt><dd>3</dd><dt>Years</dt><dd> 11 12 13</dd></dl></div><div class="contact searchable" data-index="chromium 3@ 9 10 13">
+<dl><dt>ORGNAME</dt><dd>chromium</dd><dt>Frequency</dt><dd>3</dd><dt>Years</dt><dd> 9 10 13</dd></dl></div><div class="contact searchable" data-index="codeforamerica 3@ 11 12 13">
+<dl><dt>ORGNAME</dt><dd>codeforamerica</dd><dt>Frequency</dt><dd>3</dd><dt>Years</dt><dd> 11 12 13</dd></dl></div><div class="contact searchable" data-index="codehaus 3@ 9 10 11">
+<dl><dt>ORGNAME</dt><dd>codehaus</dd><dt>Frequency</dt><dd>3</dd><dt>Years</dt><dd> 9 10 11</dd></dl></div><div class="contact searchable" data-index="coreboot 3@ 10 11 13">
+<dl><dt>ORGNAME</dt><dd>coreboot</dd><dt>Frequency</dt><dd>3</dd><dt>Years</dt><dd> 10 11 13</dd></dl></div><div class="contact searchable" data-index="cse_tuwien 3@ 11 12 13">
+<dl><dt>ORGNAME</dt><dd>cse_tuwien</dd><dt>Frequency</dt><dd>3</dd><dt>Years</dt><dd> 11 12 13</dd></dl></div><div class="contact searchable" data-index="esug 3@ 10 12 13">
+<dl><dt>ORGNAME</dt><dd>esug</dd><dt>Frequency</dt><dd>3</dd><dt>Years</dt><dd> 10 12 13</dd></dl></div><div class="contact searchable" data-index="etherboot 3@ 9 10 11">
+<dl><dt>ORGNAME</dt><dd>etherboot</dd><dt>Frequency</dt><dd>3</dd><dt>Years</dt><dd> 9 10 11</dd></dl></div><div class="contact searchable" data-index="fedora 3@ 11 12 13">
+<dl><dt>ORGNAME</dt><dd>fedora</dd><dt>Frequency</dt><dd>3</dd><dt>Years</dt><dd> 11 12 13</dd></dl></div><div class="contact searchable" data-index="freifunk 3@ 10 11 12">
+<dl><dt>ORGNAME</dt><dd>freifunk</dd><dt>Frequency</dt><dd>3</dd><dt>Years</dt><dd> 10 11 12</dd></dl></div><div class="contact searchable" data-index="genomeinformatics 3@ 11 12 13">
+<dl><dt>ORGNAME</dt><dd>genomeinformatics</dd><dt>Frequency</dt><dd>3</dd><dt>Years</dt><dd> 11 12 13</dd></dl></div><div class="contact searchable" data-index="geogebra 3@ 10 11 12">
+<dl><dt>ORGNAME</dt><dd>geogebra</dd><dt>Frequency</dt><dd>3</dd><dt>Years</dt><dd> 10 11 12</dd></dl></div><div class="contact searchable" data-index="globus 3@ 9 10 11">
+<dl><dt>ORGNAME</dt><dd>globus</dd><dt>Frequency</dt><dd>3</dd><dt>Years</dt><dd> 9 10 11</dd></dl></div><div class="contact searchable" data-index="gnu 3@ 11 12 13">
+<dl><dt>ORGNAME</dt><dd>gnu</dd><dt>Frequency</dt><dd>3</dd><dt>Years</dt><dd> 11 12 13</dd></dl></div><div class="contact searchable" data-index="hg 3@ 9 10 13">
+<dl><dt>ORGNAME</dt><dd>hg</dd><dt>Frequency</dt><dd>3</dd><dt>Years</dt><dd> 9 10 13</dd></dl></div><div class="contact searchable" data-index="hugin 3@ 9 10 11">
+<dl><dt>ORGNAME</dt><dd>hugin</dd><dt>Frequency</dt><dd>3</dd><dt>Years</dt><dd> 9 10 11</dd></dl></div><div class="contact searchable" data-index="idi_idrc 3@ 11 12 13">
+<dl><dt>ORGNAME</dt><dd>idi_idrc</dd><dt>Frequency</dt><dd>3</dd><dt>Years</dt><dd> 11 12 13</dd></dl></div><div class="contact searchable" data-index="illumos 3@ 11 12 13">
+<dl><dt>ORGNAME</dt><dd>illumos</dd><dt>Frequency</dt><dd>3</dd><dt>Years</dt><dd> 11 12 13</dd></dl></div><div class="contact searchable" data-index="incf 3@ 11 12 13">
+<dl><dt>ORGNAME</dt><dd>incf</dd><dt>Frequency</dt><dd>3</dd><dt>Years</dt><dd> 11 12 13</dd></dl></div><div class="contact searchable" data-index="javapathfinder 3@ 11 12 13">
+<dl><dt>ORGNAME</dt><dd>javapathfinder</dd><dt>Frequency</dt><dd>3</dd><dt>Years</dt><dd> 11 12 13</dd></dl></div><div class="contact searchable" data-index="jikesrvm 3@ 10 11 12">
+<dl><dt>ORGNAME</dt><dd>jikesrvm</dd><dt>Frequency</dt><dd>3</dd><dt>Years</dt><dd> 10 11 12</dd></dl></div><div class="contact searchable" data-index="joomla 3@ 9 12 13">
+<dl><dt>ORGNAME</dt><dd>joomla</dd><dt>Frequency</dt><dd>3</dd><dt>Years</dt><dd> 9 12 13</dd></dl></div><div class="contact searchable" data-index="kernelorg 3@ 10 11 12">
+<dl><dt>ORGNAME</dt><dd>kernelorg</dd><dt>Frequency</dt><dd>3</dd><dt>Years</dt><dd> 10 11 12</dd></dl></div><div class="contact searchable" data-index="lf 3@ 10 12 13">
+<dl><dt>ORGNAME</dt><dd>lf</dd><dt>Frequency</dt><dd>3</dd><dt>Years</dt><dd> 10 12 13</dd></dl></div><div class="contact searchable" data-index="libreoffice 3@ 11 12 13">
+<dl><dt>ORGNAME</dt><dd>libreoffice</dd><dt>Frequency</dt><dd>3</dd><dt>Years</dt><dd> 11 12 13</dd></dl></div><div class="contact searchable" data-index="moin 3@ 9 10 11">
+<dl><dt>ORGNAME</dt><dd>moin</dd><dt>Frequency</dt><dd>3</dd><dt>Years</dt><dd> 9 10 11</dd></dl></div><div class="contact searchable" data-index="nrnb 3@ 11 12 13">
+<dl><dt>ORGNAME</dt><dd>nrnb</dd><dt>Frequency</dt><dd>3</dd><dt>Years</dt><dd> 11 12 13</dd></dl></div><div class="contact searchable" data-index="ntp 3@ 9 10 11">
+<dl><dt>ORGNAME</dt><dd>ntp</dd><dt>Frequency</dt><dd>3</dd><dt>Years</dt><dd> 9 10 11</dd></dl></div><div class="contact searchable" data-index="obf 3@ 10 11 12">
+<dl><dt>ORGNAME</dt><dd>obf</dd><dt>Frequency</dt><dd>3</dd><dt>Years</dt><dd> 10 11 12</dd></dl></div><div class="contact searchable" data-index="openicc 3@ 10 11 12">
+<dl><dt>ORGNAME</dt><dd>openicc</dd><dt>Frequency</dt><dd>3</dd><dt>Years</dt><dd> 10 11 12</dd></dl></div><div class="contact searchable" data-index="opennms 3@ 11 12 13">
+<dl><dt>ORGNAME</dt><dd>opennms</dd><dt>Frequency</dt><dd>3</dd><dt>Years</dt><dd> 11 12 13</dd></dl></div><div class="contact searchable" data-index="openwall 3@ 11 12 13">
+<dl><dt>ORGNAME</dt><dd>openwall</dd><dt>Frequency</dt><dd>3</dd><dt>Years</dt><dd> 11 12 13</dd></dl></div><div class="contact searchable" data-index="osm 3@ 10 11 12">
+<dl><dt>ORGNAME</dt><dd>osm</dd><dt>Frequency</dt><dd>3</dd><dt>Years</dt><dd> 10 11 12</dd></dl></div><div class="contact searchable" data-index="parrot 3@ 11 12 13">
+<dl><dt>ORGNAME</dt><dd>parrot</dd><dt>Frequency</dt><dd>3</dd><dt>Years</dt><dd> 11 12 13</dd></dl></div><div class="contact searchable" data-index="phpmyadmin 3@ 11 12 13">
+<dl><dt>ORGNAME</dt><dd>phpmyadmin</dd><dt>Frequency</dt><dd>3</dd><dt>Years</dt><dd> 11 12 13</dd></dl></div><div class="contact searchable" data-index="processing 3@ 11 12 13">
+<dl><dt>ORGNAME</dt><dd>processing</dd><dt>Frequency</dt><dd>3</dd><dt>Years</dt><dd> 11 12 13</dd></dl></div><div class="contact searchable" data-index="qemu 3@ 10 11 13">
+<dl><dt>ORGNAME</dt><dd>qemu</dd><dt>Frequency</dt><dd>3</dd><dt>Years</dt><dd> 10 11 13</dd></dl></div><div class="contact searchable" data-index="rockbox 3@ 9 10 11">
+<dl><dt>ORGNAME</dt><dd>rockbox</dd><dt>Frequency</dt><dd>3</dd><dt>Years</dt><dd> 9 10 11</dd></dl></div><div class="contact searchable" data-index="rproject 3@ 11 12 13">
+<dl><dt>ORGNAME</dt><dd>rproject</dd><dt>Frequency</dt><dd>3</dd><dt>Years</dt><dd> 11 12 13</dd></dl></div><div class="contact searchable" data-index="sakai 3@ 9 10 11">
+<dl><dt>ORGNAME</dt><dd>sakai</dd><dt>Frequency</dt><dd>3</dd><dt>Years</dt><dd> 9 10 11</dd></dl></div><div class="contact searchable" data-index="sdl 3@ 9 10 11">
+<dl><dt>ORGNAME</dt><dd>sdl</dd><dt>Frequency</dt><dd>3</dd><dt>Years</dt><dd> 9 10 11</dd></dl></div><div class="contact searchable" data-index="shogun 3@ 11 12 13">
+<dl><dt>ORGNAME</dt><dd>shogun</dd><dt>Frequency</dt><dd>3</dd><dt>Years</dt><dd> 11 12 13</dd></dl></div><div class="contact searchable" data-index="sympy 3@ 11 12 13">
+<dl><dt>ORGNAME</dt><dd>sympy</dd><dt>Frequency</dt><dd>3</dd><dt>Years</dt><dd> 11 12 13</dd></dl></div><div class="contact searchable" data-index="tcltk 3@ 9 10 11">
+<dl><dt>ORGNAME</dt><dd>tcltk</dd><dt>Frequency</dt><dd>3</dd><dt>Years</dt><dd> 9 10 11</dd></dl></div><div class="contact searchable" data-index="tor 3@ 10 11 13">
+<dl><dt>ORGNAME</dt><dd>tor</dd><dt>Frequency</dt><dd>3</dd><dt>Years</dt><dd> 10 11 13</dd></dl></div><div class="contact searchable" data-index="umit 3@ 9 11 12">
+<dl><dt>ORGNAME</dt><dd>umit</dd><dt>Frequency</dt><dd>3</dd><dt>Years</dt><dd> 9 11 12</dd></dl></div><div class="contact searchable" data-index="videolan 3@ 9 10 11">
+<dl><dt>ORGNAME</dt><dd>videolan</dd><dt>Frequency</dt><dd>3</dd><dt>Years</dt><dd> 9 10 11</dd></dl></div><div class="contact searchable" data-index="wx 3@ 9 10 11">
+<dl><dt>ORGNAME</dt><dd>wx</dd><dt>Frequency</dt><dd>3</dd><dt>Years</dt><dd> 9 10 11</dd></dl></div><div class="contact searchable" data-index="xmms2 3@ 9 10 11">
+<dl><dt>ORGNAME</dt><dd>xmms2</dd><dt>Frequency</dt><dd>3</dd><dt>Years</dt><dd> 9 10 11</dd></dl></div><div class="contact searchable" data-index="xsf 3@ 10 11 12">
+<dl><dt>ORGNAME</dt><dd>xsf</dd><dt>Frequency</dt><dd>3</dd><dt>Years</dt><dd> 10 11 12</dd></dl></div><div class="contact searchable" data-index="ascend 4@ 9 10 11 12">
+<dl><dt>ORGNAME</dt><dd>ascend</dd><dt>Frequency</dt><dd>4</dd><dt>Years</dt><dd> 9 10 11 12</dd></dl></div><div class="contact searchable" data-index="bluez 4@ 9 10 11 12">
+<dl><dt>ORGNAME</dt><dd>bluez</dd><dt>Frequency</dt><dd>4</dd><dt>Years</dt><dd> 9 10 11 12</dd></dl></div><div class="contact searchable" data-index="boost 4@ 9 10 11 13">
+<dl><dt>ORGNAME</dt><dd>boost</dd><dt>Frequency</dt><dd>4</dd><dt>Years</dt><dd> 9 10 11 13</dd></dl></div><div class="contact searchable" data-index="brlcad 4@ 9 11 12 13">
+<dl><dt>ORGNAME</dt><dd>brlcad</dd><dt>Frequency</dt><dd>4</dd><dt>Years</dt><dd> 9 11 12 13</dd></dl></div><div class="contact searchable" data-index="cc 4@ 9 11 12 13">
+<dl><dt>ORGNAME</dt><dd>cc</dd><dt>Frequency</dt><dd>4</dd><dt>Years</dt><dd> 9 11 12 13</dd></dl></div><div class="contact searchable" data-index="cgal 4@ 10 11 12 13">
+<dl><dt>ORGNAME</dt><dd>cgal</dd><dt>Frequency</dt><dd>4</dd><dt>Years</dt><dd> 10 11 12 13</dd></dl></div><div class="contact searchable" data-index="dragonflybsd 4@ 9 11 12 13">
+<dl><dt>ORGNAME</dt><dd>dragonflybsd</dd><dt>Frequency</dt><dd>4</dd><dt>Years</dt><dd> 9 11 12 13</dd></dl></div><div class="contact searchable" data-index="drizzle 4@ 10 11 12 13">
+<dl><dt>ORGNAME</dt><dd>drizzle</dd><dt>Frequency</dt><dd>4</dd><dt>Years</dt><dd> 10 11 12 13</dd></dl></div><div class="contact searchable" data-index="drupal 4@ 9 10 11 12">
+<dl><dt>ORGNAME</dt><dd>drupal</dd><dt>Frequency</dt><dd>4</dd><dt>Years</dt><dd> 9 10 11 12</dd></dl></div><div class="contact searchable" data-index="git 4@ 9 10 11 12">
+<dl><dt>ORGNAME</dt><dd>git</dd><dt>Frequency</dt><dd>4</dd><dt>Years</dt><dd> 9 10 11 12</dd></dl></div><div class="contact searchable" data-index="haiku 4@ 9 10 11 12">
+<dl><dt>ORGNAME</dt><dd>haiku</dd><dt>Frequency</dt><dd>4</dd><dt>Years</dt><dd> 9 10 11 12</dd></dl></div><div class="contact searchable" data-index="inkscape 4@ 10 11 12 13">
+<dl><dt>ORGNAME</dt><dd>inkscape</dd><dt>Frequency</dt><dd>4</dd><dt>Years</dt><dd> 10 11 12 13</dd></dl></div><div class="contact searchable" data-index="macports 4@ 9 10 11 13">
+<dl><dt>ORGNAME</dt><dd>macports</dd><dt>Frequency</dt><dd>4</dd><dt>Years</dt><dd> 9 10 11 13</dd></dl></div><div class="contact searchable" data-index="metabrainz 4@ 10 11 12 13">
+<dl><dt>ORGNAME</dt><dd>metabrainz</dd><dt>Frequency</dt><dd>4</dd><dt>Years</dt><dd> 10 11 12 13</dd></dl></div><div class="contact searchable" data-index="mixxx 4@ 10 11 12 13">
+<dl><dt>ORGNAME</dt><dd>mixxx</dd><dt>Frequency</dt><dd>4</dd><dt>Years</dt><dd> 10 11 12 13</dd></dl></div><div class="contact searchable" data-index="moodle 4@ 9 11 12 13">
+<dl><dt>ORGNAME</dt><dd>moodle</dd><dt>Frequency</dt><dd>4</dd><dt>Years</dt><dd> 9 11 12 13</dd></dl></div><div class="contact searchable" data-index="ns3 4@ 9 10 12 13">
+<dl><dt>ORGNAME</dt><dd>ns3</dd><dt>Frequency</dt><dd>4</dd><dt>Years</dt><dd> 9 10 12 13</dd></dl></div><div class="contact searchable" data-index="nuigroup 4@ 9 10 11 12">
+<dl><dt>ORGNAME</dt><dd>nuigroup</dd><dt>Frequency</dt><dd>4</dd><dt>Years</dt><dd> 9 10 11 12</dd></dl></div><div class="contact searchable" data-index="opencv 4@ 10 11 12 13">
+<dl><dt>ORGNAME</dt><dd>opencv</dd><dt>Frequency</dt><dd>4</dd><dt>Years</dt><dd> 10 11 12 13</dd></dl></div><div class="contact searchable" data-index="opensuse 4@ 9 11 12 13">
+<dl><dt>ORGNAME</dt><dd>opensuse</dd><dt>Frequency</dt><dd>4</dd><dt>Years</dt><dd> 9 11 12 13</dd></dl></div><div class="contact searchable" data-index="pidgin 4@ 9 10 12 13">
+<dl><dt>ORGNAME</dt><dd>pidgin</dd><dt>Frequency</dt><dd>4</dd><dt>Years</dt><dd> 9 10 12 13</dd></dl></div><div class="contact searchable" data-index="plan9 4@ 9 10 11 13">
+<dl><dt>ORGNAME</dt><dd>plan9</dd><dt>Frequency</dt><dd>4</dd><dt>Years</dt><dd> 9 10 11 13</dd></dl></div><div class="contact searchable" data-index="plone 4@ 9 10 11 13">
+<dl><dt>ORGNAME</dt><dd>plone</dd><dt>Frequency</dt><dd>4</dd><dt>Years</dt><dd> 9 10 11 13</dd></dl></div><div class="contact searchable" data-index="portland_state 4@ 9 11 12 13">
+<dl><dt>ORGNAME</dt><dd>portland_state</dd><dt>Frequency</dt><dd>4</dd><dt>Years</dt><dd> 9 11 12 13</dd></dl></div><div class="contact searchable" data-index="postgresql 4@ 10 11 12 13">
+<dl><dt>ORGNAME</dt><dd>postgresql</dd><dt>Frequency</dt><dd>4</dd><dt>Years</dt><dd> 10 11 12 13</dd></dl></div><div class="contact searchable" data-index="reviewboard 4@ 9 10 11 12">
+<dl><dt>ORGNAME</dt><dd>reviewboard</dd><dt>Frequency</dt><dd>4</dd><dt>Years</dt><dd> 9 10 11 12</dd></dl></div><div class="contact searchable" data-index="sahana 4@ 9 11 12 13">
+<dl><dt>ORGNAME</dt><dd>sahana</dd><dt>Frequency</dt><dd>4</dd><dt>Years</dt><dd> 9 11 12 13</dd></dl></div><div class="contact searchable" data-index="scilab 4@ 9 10 11 12">
+<dl><dt>ORGNAME</dt><dd>scilab</dd><dt>Frequency</dt><dd>4</dd><dt>Years</dt><dd> 9 10 11 12</dd></dl></div><div class="contact searchable" data-index="systers 4@ 9 10 12 13">
+<dl><dt>ORGNAME</dt><dd>systers</dd><dt>Frequency</dt><dd>4</dd><dt>Years</dt><dd> 9 10 12 13</dd></dl></div><div class="contact searchable" data-index="tux4kids 4@ 9 10 12 13">
+<dl><dt>ORGNAME</dt><dd>tux4kids</dd><dt>Frequency</dt><dd>4</dd><dt>Years</dt><dd> 9 10 12 13</dd></dl></div><div class="contact searchable" data-index="typo3 4@ 9 10 11 13">
+<dl><dt>ORGNAME</dt><dd>typo3</dd><dt>Frequency</dt><dd>4</dd><dt>Years</dt><dd> 9 10 11 13</dd></dl></div><div class="contact searchable" data-index="wordpress 4@ 9 10 11 13">
+<dl><dt>ORGNAME</dt><dd>wordpress</dd><dt>Frequency</dt><dd>4</dd><dt>Years</dt><dd> 9 10 11 13</dd></dl></div><div class="contact searchable" data-index="xorg 4@ 9 10 11 13">
+<dl><dt>ORGNAME</dt><dd>xorg</dd><dt>Frequency</dt><dd>4</dd><dt>Years</dt><dd> 9 10 11 13</dd></dl></div><div class="contact searchable" data-index="xwiki 4@ 9 11 12 13">
+<dl><dt>ORGNAME</dt><dd>xwiki</dd><dt>Frequency</dt><dd>4</dd><dt>Years</dt><dd> 9 11 12 13</dd></dl></div><div class="contact searchable" data-index="abiword 5@ 9 10 11 12 13">
+<dl><dt>ORGNAME</dt><dd>abiword</dd><dt>Frequency</dt><dd>5</dd><dt>Years</dt><dd> 9 10 11 12 13</dd></dl></div><div class="contact searchable" data-index="apertium 5@ 9 10 11 12 13">
+<dl><dt>ORGNAME</dt><dd>apertium</dd><dt>Frequency</dt><dd>5</dd><dt>Years</dt><dd> 9 10 11 12 13</dd></dl></div><div class="contact searchable" data-index="blender 5@ 9 10 11 12 13">
+<dl><dt>ORGNAME</dt><dd>blender</dd><dt>Frequency</dt><dd>5</dd><dt>Years</dt><dd> 9 10 11 12 13</dd></dl></div><div class="contact searchable" data-index="crystalspace 5@ 9 10 11 12 13">
+<dl><dt>ORGNAME</dt><dd>crystalspace</dd><dt>Frequency</dt><dd>5</dd><dt>Years</dt><dd> 9 10 11 12 13</dd></dl></div><div class="contact searchable" data-index="debian 5@ 9 10 11 12 13">
+<dl><dt>ORGNAME</dt><dd>debian</dd><dt>Frequency</dt><dd>5</dd><dt>Years</dt><dd> 9 10 11 12 13</dd></dl></div><div class="contact searchable" data-index="django 5@ 9 10 11 12 13">
+<dl><dt>ORGNAME</dt><dd>django</dd><dt>Frequency</dt><dd>5</dd><dt>Years</dt><dd> 9 10 11 12 13</dd></dl></div><div class="contact searchable" data-index="eclipse 5@ 9 10 11 12 13">
+<dl><dt>ORGNAME</dt><dd>eclipse</dd><dt>Frequency</dt><dd>5</dd><dt>Years</dt><dd> 9 10 11 12 13</dd></dl></div><div class="contact searchable" data-index="freebsd 5@ 9 10 11 12 13">
+<dl><dt>ORGNAME</dt><dd>freebsd</dd><dt>Frequency</dt><dd>5</dd><dt>Years</dt><dd> 9 10 11 12 13</dd></dl></div><div class="contact searchable" data-index="freenet 5@ 9 10 11 12 13">
+<dl><dt>ORGNAME</dt><dd>freenet</dd><dt>Frequency</dt><dd>5</dd><dt>Years</dt><dd> 9 10 11 12 13</dd></dl></div><div class="contact searchable" data-index="gcc 5@ 9 10 11 12 13">
+<dl><dt>ORGNAME</dt><dd>gcc</dd><dt>Frequency</dt><dd>5</dd><dt>Years</dt><dd> 9 10 11 12 13</dd></dl></div><div class="contact searchable" data-index="gentoo 5@ 9 10 11 12 13">
+<dl><dt>ORGNAME</dt><dd>gentoo</dd><dt>Frequency</dt><dd>5</dd><dt>Years</dt><dd> 9 10 11 12 13</dd></dl></div><div class="contact searchable" data-index="gephi 5@ 9 10 11 12 13">
+<dl><dt>ORGNAME</dt><dd>gephi</dd><dt>Frequency</dt><dd>5</dd><dt>Years</dt><dd> 9 10 11 12 13</dd></dl></div><div class="contact searchable" data-index="gimp 5@ 9 10 11 12 13">
+<dl><dt>ORGNAME</dt><dd>gimp</dd><dt>Frequency</dt><dd>5</dd><dt>Years</dt><dd> 9 10 11 12 13</dd></dl></div><div class="contact searchable" data-index="gnome 5@ 9 10 11 12 13">
+<dl><dt>ORGNAME</dt><dd>gnome</dd><dt>Frequency</dt><dd>5</dd><dt>Years</dt><dd> 9 10 11 12 13</dd></dl></div><div class="contact searchable" data-index="haskell 5@ 9 10 11 12 13">
+<dl><dt>ORGNAME</dt><dd>haskell</dd><dt>Frequency</dt><dd>5</dd><dt>Years</dt><dd> 9 10 11 12 13</dd></dl></div><div class="contact searchable" data-index="honeynet 5@ 9 10 11 12 13">
+<dl><dt>ORGNAME</dt><dd>honeynet</dd><dt>Frequency</dt><dd>5</dd><dt>Years</dt><dd> 9 10 11 12 13</dd></dl></div><div class="contact searchable" data-index="kde 5@ 9 10 11 12 13">
+<dl><dt>ORGNAME</dt><dd>kde</dd><dt>Frequency</dt><dd>5</dd><dt>Years</dt><dd> 9 10 11 12 13</dd></dl></div><div class="contact searchable" data-index="llvm 5@ 9 10 11 12 13">
+<dl><dt>ORGNAME</dt><dd>llvm</dd><dt>Frequency</dt><dd>5</dd><dt>Years</dt><dd> 9 10 11 12 13</dd></dl></div><div class="contact searchable" data-index="melange 5@ 9 10 11 12 13">
+<dl><dt>ORGNAME</dt><dd>melange</dd><dt>Frequency</dt><dd>5</dd><dt>Years</dt><dd> 9 10 11 12 13</dd></dl></div><div class="contact searchable" data-index="mono 5@ 9 10 11 12 13">
+<dl><dt>ORGNAME</dt><dd>mono</dd><dt>Frequency</dt><dd>5</dd><dt>Years</dt><dd> 9 10 11 12 13</dd></dl></div><div class="contact searchable" data-index="mozilla 5@ 9 10 11 12 13">
+<dl><dt>ORGNAME</dt><dd>mozilla</dd><dt>Frequency</dt><dd>5</dd><dt>Years</dt><dd> 9 10 11 12 13</dd></dl></div><div class="contact searchable" data-index="nescent 5@ 9 10 11 12 13">
+<dl><dt>ORGNAME</dt><dd>nescent</dd><dt>Frequency</dt><dd>5</dd><dt>Years</dt><dd> 9 10 11 12 13</dd></dl></div><div class="contact searchable" data-index="netbsd 5@ 9 10 11 12 13">
+<dl><dt>ORGNAME</dt><dd>netbsd</dd><dt>Frequency</dt><dd>5</dd><dt>Years</dt><dd> 9 10 11 12 13</dd></dl></div><div class="contact searchable" data-index="nmap 5@ 9 10 11 12 13">
+<dl><dt>ORGNAME</dt><dd>nmap</dd><dt>Frequency</dt><dd>5</dd><dt>Years</dt><dd> 9 10 11 12 13</dd></dl></div><div class="contact searchable" data-index="openmrs 5@ 9 10 11 12 13">
+<dl><dt>ORGNAME</dt><dd>openmrs</dd><dt>Frequency</dt><dd>5</dd><dt>Years</dt><dd> 9 10 11 12 13</dd></dl></div><div class="contact searchable" data-index="osgeo 5@ 9 10 11 12 13">
+<dl><dt>ORGNAME</dt><dd>osgeo</dd><dt>Frequency</dt><dd>5</dd><dt>Years</dt><dd> 9 10 11 12 13</dd></dl></div><div class="contact searchable" data-index="osuosl 5@ 9 10 11 12 13">
+<dl><dt>ORGNAME</dt><dd>osuosl</dd><dt>Frequency</dt><dd>5</dd><dt>Years</dt><dd> 9 10 11 12 13</dd></dl></div><div class="contact searchable" data-index="python 5@ 9 10 11 12 13">
+<dl><dt>ORGNAME</dt><dd>python</dd><dt>Frequency</dt><dd>5</dd><dt>Years</dt><dd> 9 10 11 12 13</dd></dl></div><div class="contact searchable" data-index="rtems 5@ 9 10 11 12 13">
+<dl><dt>ORGNAME</dt><dd>rtems</dd><dt>Frequency</dt><dd>5</dd><dt>Years</dt><dd> 9 10 11 12 13</dd></dl></div><div class="contact searchable" data-index="samba 5@ 9 10 11 12 13">
+<dl><dt>ORGNAME</dt><dd>samba</dd><dt>Frequency</dt><dd>5</dd><dt>Years</dt><dd> 9 10 11 12 13</dd></dl></div><div class="contact searchable" data-index="scummvm 5@ 9 10 11 12 13">
+<dl><dt>ORGNAME</dt><dd>scummvm</dd><dt>Frequency</dt><dd>5</dd><dt>Years</dt><dd> 9 10 11 12 13</dd></dl></div><div class="contact searchable" data-index="wesnoth 5@ 9 10 11 12 13">
+<dl><dt>ORGNAME</dt><dd>wesnoth</dd><dt>Frequency</dt><dd>5</dd><dt>Years</dt><dd> 9 10 11 12 13</dd></dl></div><div class="contact searchable" data-index="wikimedia 5@ 9 10 11 12 13">
+<dl><dt>ORGNAME</dt><dd>wikimedia</dd><dt>Frequency</dt><dd>5</dd><dt>Years</dt><dd> 9 10 11 12 13</dd></dl></div><div class="contact searchable" data-index="wine 5@ 9 10 11 12 13">
+<dl><dt>ORGNAME</dt><dd>wine</dd><dt>Frequency</dt><dd>5</dd><dt>Years</dt><dd> 9 10 11 12 13</dd></dl></div><div class="contact searchable" data-index="worldforge 5@ 9 10 11 12 13">
+<dl><dt>ORGNAME</dt><dd>worldforge</dd><dt>Frequency</dt><dd>5</dd><dt>Years</dt><dd> 9 10 11 12 13</dd></dl></div><div class="contact searchable" data-index="worldforge 5@ 9 10 11 12 13">
+<dl><dt>ORGNAME</dt><dd>worldforge</dd><dt>Frequency</dt><dd>5</dd><dt>Years</dt><dd> 9 10 11 12 13</dd></dl></div>
+		<script src="js/classie.js"></script>
+		<script src="js/uisearch.js"></script>
+		<script>
+			new UISearch( document.getElementById( 'sb-search' ) );
+		</script>
+	</body>
+</html>
